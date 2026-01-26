@@ -1,4 +1,3 @@
-import React, { type Dispatch, type SetStateAction } from 'react';
 import type { FormProps } from 'antd';
 import {Button, Form, Input } from 'antd';
 import axios from "axios";
