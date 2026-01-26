@@ -18,7 +18,7 @@ const App = () => {
   const [isAuth, setIsAuth] : [
     boolean,
     React.Dispatch<React.SetStateAction<boolean>>
-  ] = useState()
+  ] = useState(getAuth())
 
   return (
     <BrowserRouter>
