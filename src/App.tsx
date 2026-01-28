@@ -7,8 +7,15 @@ import GanrePage from "./pages/GanrePage"
 import CategoryPage from "./pages/CategoryPage"
 import React, {useState } from "react"
 import LayoutPage from "./components/Layout"
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
 
 const App = () => {
+
+  const queryClint = new QueryClient();
+
   const getAuth = ():boolean => {
     const auth = localStorage.getItem("auth");
 
@@ -21,7 +28,8 @@ const App = () => {
   ] = useState(getAuth())
 
   return (
-    <BrowserRouter>
+    <QueryClientProvider client={queryClint}>
+      <BrowserRouter>
         <Routes>
             <Route path="/" element={<LoginPage setIsAuth={setIsAuth}/>}/>
                 <Route element={isAuth ? <LayoutPage/> : <Navigate to={"/"}/>}>
@@ -33,6 +41,7 @@ const App = () => {
             </Route>
         </Routes>
     </BrowserRouter>
+    </QueryClientProvider>
   )
 }
 

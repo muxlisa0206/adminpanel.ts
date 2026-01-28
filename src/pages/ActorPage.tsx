@@ -1,7 +1,23 @@
+import ActorAddForm from "@/components/ActorAddForm";
+import type { ActorType } from "@/components/ActorType";
+import AddModal from "@/components/AddModal";
+import useGet from "@/components/hooks/useGet"
+import TablePage from "@/components/Table";
+import { useState } from "react";
 
 const ActorPage = () => {
+  const [open, setOpen] = useState(false);
+  
+  const {data} = useGet <ActorType[]>({url: "actor", key:["actors"]})
+  console.log(data);
+  
   return (
-    <div>ActorPage</div>
+    <div>
+      <AddModal open={open} setOpen={setOpen} text={"Actor"}>
+        <ActorAddForm setOpen={setOpen}/>
+      </AddModal>
+      <TablePage data={data}/>
+    </div>
   )
 }
 
