@@ -1,4 +1,4 @@
-import React, { type Dispatch, type SetStateAction } from "react";
+import { type Dispatch, type SetStateAction } from "react";
 import type { FormProps } from "antd";
 import { Button, DatePicker, Form, Input } from "antd";
 import type { ActorAddFormType } from "./ActorAddFormType";

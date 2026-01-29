@@ -1,5 +1,4 @@
-import React from 'react';
-import { Space, Table, Button, Image } from 'antd';
+import { Table, Image } from 'antd';
 import type { TableProps } from 'antd';
 import type { DirectorType } from './DirectorType';
 
@@ -29,17 +28,17 @@ const DirectorTable = ({data}:{data?:DirectorType[]}) => {
           dataIndex: 'biography',
           key: 'biography',
         },
-        {
-          title: 'Action',
-          key: 'action',
-          render: (_: unknown, record:DirectorType) => (
-            <Space size="middle">
-              <Button>
-                Delete
-              </Button>
-            </Space>
-          ),
-        },
+        // {
+        //   title: 'Action',
+        //   key: 'action',
+        //   render: (_: unknown, record:DirectorType) => (
+        //     <Space size="middle">
+        //       <Button>
+        //         Delete
+        //       </Button>
+        //     </Space>
+        //   ),
+        // },
       ];
 
     return <Table<DirectorType> columns={columns} dataSource={data} />

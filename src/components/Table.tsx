@@ -1,5 +1,4 @@
-import React from 'react';
-import { Space, Table, Button, Image } from 'antd';
+import { Table, Image } from 'antd';
 import type { TableProps } from 'antd';
 import type { ActorType } from './ActorType';
 
@@ -30,21 +29,22 @@ const TablePage = ({data}:{data?:ActorType[]}) => {
           key: 'country',
         },
         {
-          title: 'Biography',
+          title: '',
           dataIndex: 'biography',
           key: 'biography',
         },
-        {
-          title: 'Action',
-          key: 'action',
-          render: (_: unknown, record:ActorType) => (
-            <Space size="middle">
-              <Button>
-                Delete
-              </Button>
-            </Space>
-          ),
-        },
+        // {
+        //   title: 'Action',
+        //   key: 'action',
+        //   render: (_: unknown, record:ActorType) => (
+        //     <Space size="middle">
+        //       <Button 
+        //       onClick={}>
+        //         Delete
+        //       </Button>
+        //     </Space>
+        //   ),
+        // },
       ];
 
     return <Table<ActorType> columns={columns} dataSource={data} />
