@@ -43,7 +43,7 @@ const MovieGenreAddForm = ({setOpen, movies, genre}:{setOpen:Dispatch<SetStateAc
       style={{ maxWidth: 600 }}
       initialValues={{
         movie_id: "",
-        category_id: "",
+        genre_id: "",
       }}
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
