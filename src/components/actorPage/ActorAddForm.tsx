@@ -1,11 +1,11 @@
 import { type Dispatch, type SetStateAction } from "react";
 import type { FormProps } from "antd";
 import { Button, DatePicker, Form, Input } from "antd";
-import type { ActorAddFormType } from "./ActorAddFormType";
 import dayjs from "dayjs";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useQueryClient } from "@tanstack/react-query";
+import type { ActorAddFormType } from "./ActorAddFormType";
 
 const ActorAddForm = ({setOpen}:{setOpen:Dispatch<SetStateAction<boolean>>}) => {
   const queryClient = useQueryClient();

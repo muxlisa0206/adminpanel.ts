@@ -1,7 +1,7 @@
-import ActorAddForm from "@/components/ActorAddForm";
 import AddModal from "@/components/AddModal";
-import DirectorTable from "@/components/DirectorTable";
-import type { DirectorType } from "@/components/DirectorType";
+import DirectorAddForm from "@/components/directorPage/DirectorAddForm";
+import DirectorTable from "@/components/directorPage/DirectorTable";
+import type { DirectorType } from "@/components/directorPage/DirectorType";
 import useGet from "@/components/hooks/useGet";
 import { useState } from "react";
 
@@ -14,7 +14,7 @@ const DirectorPage = () => {
   return (
     <div>
       <AddModal open={open} setOpen={setOpen} text={"Director"}>
-        <ActorAddForm setOpen={setOpen}/>
+        <DirectorAddForm setOpen={setOpen}/>
       </AddModal>
       <DirectorTable data={data}/>
     </div>

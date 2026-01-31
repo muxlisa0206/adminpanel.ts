@@ -1,9 +1,9 @@
-import ActorAddForm from "@/components/ActorAddForm";
-import type { ActorType } from "@/components/ActorType";
+import type { ActorType } from "@/components/actorPage/ActorType";
 import AddModal from "@/components/AddModal";
 import useGet from "@/components/hooks/useGet"
-import TablePage from "@/components/Table";
+import TablePage from "@/components/actorPage/Table";
 import { useState } from "react";
+import ActorAddForm from "@/components/actorPage/ActorAddForm";
 
 const ActorPage = () => {
   const [open, setOpen] = useState(false);

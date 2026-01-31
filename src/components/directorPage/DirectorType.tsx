@@ -1,5 +1,5 @@
 export interface DirectorType{
-    id?: string,
+    id: string,
     created_at?: string,
     full_name: string,
     photo_url: string,

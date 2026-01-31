@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
+import { MdLocalMovies } from "react-icons/md";
+import { TbCategory } from "react-icons/tb";
+import { BiCameraMovie } from "react-icons/bi";
+import { BiMoviePlay } from "react-icons/bi";
+import { BsPersonVideo2 } from "react-icons/bs";
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
+  TeamOutlined,
   UserOutlined,
 } from '@ant-design/icons';
 import { Button, Layout, Menu, theme } from 'antd';
@@ -26,12 +32,12 @@ const LayoutPage: React.FC = () => {
           items={[
             {
               key: '1',
-              icon: <UserOutlined />,
+              icon: <TeamOutlined />,
               label: <NavLink to={"/admin/actor"}>Actor</NavLink>,
             },
             {
                 key: '2',
-                icon: <UserOutlined />,
+                icon: <MdLocalMovies />,
                 label: <NavLink to={"/admin/movie"}>Movie</NavLink>,
             },            
             {
@@ -41,13 +47,33 @@ const LayoutPage: React.FC = () => {
             },            
             {
                 key: '4',
-                icon: <UserOutlined />,
+                icon: <BiMoviePlay />,
                 label: <NavLink to={"/admin/ganre"}>Ganre</NavLink>,
             },
             {
                 key: '5',
-                icon: <UserOutlined />,
+                icon: <TbCategory />,
                 label: <NavLink to={"/admin/category"}>Category</NavLink>,
+            },
+            {
+              key: '6',
+              icon: <BsPersonVideo2 />,
+              label: <NavLink to={"/admin/movie-actor"}>Movie and Actor</NavLink>,
+            },
+            {
+              key: '7',
+              icon: <TbCategory />,
+              label: <NavLink to={"/admin/movie-category"}>Movie and Category</NavLink>,
+            },
+            {
+              key: '8',
+              icon: <BsPersonVideo2 />,
+              label: <NavLink to={"/admin/movie-director"}>Movie and Director</NavLink>,
+            },
+            {
+              key: '9',
+              icon: <BiCameraMovie />,
+              label: <NavLink to={"/admin/movie-genre"}>Movie and Genre</NavLink>,
             },
           ]}
         />
@@ -72,6 +98,8 @@ const LayoutPage: React.FC = () => {
             minHeight: 280,
             background: colorBgContainer,
             borderRadius: borderRadiusLG,
+            height: "80vh",
+            overflowY: 'auto'
           }}
         >
           <Outlet/>
